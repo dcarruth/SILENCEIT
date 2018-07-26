@@ -4,6 +4,7 @@ public class Location {
     private VolumeSetting VolumeSetting;
     private float latitude;
     private float longitude;
+    private String name;
     private StreetAddress address;
 
 
@@ -47,6 +48,14 @@ public class Location {
         this.longitude = longitude;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    
     public StreetAddress getAddress() {
         return address;
     }
@@ -55,6 +64,6 @@ public class Location {
         this.address = address;
     }
 
-    
+
 
 }
