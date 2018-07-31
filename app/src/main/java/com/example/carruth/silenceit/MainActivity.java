@@ -9,8 +9,6 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Location location;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         Intent intent = new Intent(this, MapActivity.class);
-        intent.putExtra("location",location);
         startActivity(intent);
     }
 }
