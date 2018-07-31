@@ -1,6 +1,7 @@
 package com.example.carruth.silenceit;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.support.v4.app.ActivityCompat;
@@ -10,7 +11,6 @@ import android.support.v4.content.ContextCompat;
 import android.widget.Toast;
 
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -19,10 +19,10 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class Map extends FragmentActivity implements OnMapReadyCallback {
+public class MapActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-    private Location location;
+    private Locations locations;
     private GoogleApiClient googleApiClient;
 
     @Override
@@ -36,7 +36,8 @@ public class Map extends FragmentActivity implements OnMapReadyCallback {
 
         //Location object that is created initially in the main activity. Passed here to
         //get location information from the map if necessary.
-        location = (Location) getIntent().getSerializableExtra("location");
+
+        locations = new Locations();
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED) {
@@ -67,12 +68,16 @@ public class Map extends FragmentActivity implements OnMapReadyCallback {
             //When the user clicks a location, set the marker there and update information.
             @Override
             public void onMapClick(LatLng latLng) {
-                MarkerOptions markerOptions = new MarkerOptions();
-                markerOptions.position(latLng);
-                markerOptions.title(latLng.latitude + ":" + latLng.longitude);
-                mMap.clear();
-                mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-                mMap.addMarker(markerOptions);
+                //Set the lat and long in the location object
+               locations.setLatitude((float) latLng.latitude);
+               locations.setLongitude((float) latLng.longitude);
+
+               MarkerOptions markerOptions = new MarkerOptions();
+               markerOptions.position(latLng);
+               markerOptions.title(latLng.latitude + ":" + latLng.longitude);
+               mMap.clear();
+               mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+               mMap.addMarker(markerOptions);
             }
         });
     }

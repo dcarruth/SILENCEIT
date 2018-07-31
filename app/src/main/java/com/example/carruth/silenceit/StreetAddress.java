@@ -1,3 +1,5 @@
+package com.example.carruth.silenceit;
+
 public class StreetAddress {
     private int zipCode;
     private String street;

@@ -1,4 +1,6 @@
-public class Location {
+package com.example.carruth.silenceit;
+
+public class Locations {
 //Can i PUsh this line here
     private short volumeIntensity;
     private VolumeSetting VolumeSetting;
@@ -22,6 +24,15 @@ public class Location {
         else {
             this.volumeIntensity = volumeIntensity;
         }
+    }
+
+    Locations (){
+        volumeIntensity = 0;
+        VolumeSetting = VolumeSetting.SILENT;
+        latitude = (float) 0.0;
+        longitude = (float) 0.0;
+        name = "Home";
+        address = new StreetAddress();
     }
 
     public VolumeSetting getVolumeSetting() {
