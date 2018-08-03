@@ -1,4 +1,19 @@
 <resources>
     <string name="app_name">SILENCEIT</string>
     <string name="title_activity_map">Map</string>
+    <string name="new_location_name">Enter Location Name</string>
+    <string name="new_location_address">Enter Address</string>
+    <string name="new_location_sound_setting">Select Sound Setting</string>
+    <string name="location_name_place_holder">Name</string>
+    <string name="new_street">Street</string>
+    <string name="new_city">City</string>
+    <string name="new_state">State</string>
+    <string name="new_postal_code">zip</string>
+    <string name="setting_vibrate">Vibrate</string>
+    <string name="setting_on">Sound On</string>
+    <string name="setting_silent">Silent</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_create_location">CreateLocationActivity</string>
 </resources>

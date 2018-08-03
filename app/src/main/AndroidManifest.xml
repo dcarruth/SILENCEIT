@@ -40,7 +40,10 @@
         <activity
             android:name=".MapActivity"
             android:label="@string/title_activity_map" />
+        <activity
+            android:name=".CreateLocationActivity"
+            android:label="@string/title_activity_create_location"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
-
 
 </manifest>

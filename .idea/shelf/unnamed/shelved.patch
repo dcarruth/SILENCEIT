@@ -1,0 +1,44 @@
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<android.support.constraint.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\"\n    tools:context=\"com.example.carruth.silenceit.MainActivity\">\n\n    <TextView\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:text=\"Hello World!\"\n        app:layout_constraintBottom_toBottomOf=\"parent\"\n        app:layout_constraintLeft_toLeftOf=\"parent\"\n        app:layout_constraintRight_toRightOf=\"parent\"\n        app:layout_constraintTop_toTopOf=\"parent\" />\n\n</android.support.constraint.ConstraintLayout>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_main.xml	(revision 3c559704ba4535c9b1c2e4ee7256f2d83049607d)
++++ app/src/main/res/layout/activity_main.xml	(date 1533257625434)
+@@ -7,12 +7,10 @@
+     tools:context="com.example.carruth.silenceit.MainActivity">
+ 
+     <TextView
++        android:id="@+id/textView"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+-        android:text="Hello World!"
+-        app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintLeft_toLeftOf="parent"
+-        app:layout_constraintRight_toRightOf="parent"
+-        app:layout_constraintTop_toTopOf="parent" />
+-
++        android:text="TextView"
++        tools:layout_editor_absoluteX="283dp"
++        tools:layout_editor_absoluteY="43dp" />
+ </android.support.constraint.ConstraintLayout>
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources>\n    <string name=\"app_name\">SILENCEIT</string>\n    <string name=\"title_activity_map\">Map</string>\n</resources>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/strings.xml	(revision 3c559704ba4535c9b1c2e4ee7256f2d83049607d)
++++ app/src/main/res/values/strings.xml	(date 1533257697232)
+@@ -1,4 +1,7 @@
+-<resources>
++<string>
+     <string name="app_name">SILENCEIT</string>
+     <string name="title_activity_map">Map</string>
++    <string name="new_name">Enter Your Locations Name</string>
++    <string name="new_location">Enter Location Address</string>
++    <string name="select_sound_setting">Select Sound Setting</string>
+ </resources>
